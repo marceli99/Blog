@@ -1,0 +1,305 @@
+$light_gray: #474754
+$default_font: 'Nunito'
+
+*
+    box-sizing: border-box
+
+@keyframes fadein
+    from
+        opacity: 0
+
+    to
+        opacity: 1
+
+@-moz-keyframes fadein
+    from
+        opacity: 0
+
+    to
+        opacity: 1
+
+@-webkit-keyframes fadein
+    from
+        opacity: 0
+
+    to
+        opacity: 1
+
+@-ms-keyframes fadein
+    from
+        opacity: 0
+
+    to
+        opacity: 1
+
+@-o-keyframes fadein
+    from
+        opacity: 0
+
+    to
+        opacity: 1
+
+body, html
+    display: flex
+    margin: 0
+    width: 100%
+    letter-spacing: 0.1em
+    font-family: $default_font, sans-serif
+    -webkit-animation: fadein 0.5s
+    -moz-animation: fadein 0.5s
+    -o-animation: fadein 0.5s
+    animation: fadein 0.5s
+
+nav
+    background: $light_gray
+    position: fixed
+    display: flex
+    flex-direction: column
+    width: 35%
+    height: 100%
+    padding: 64px
+    color: white
+
+    ul
+        list-style: none
+        padding: 0
+
+    div
+        position: absolute
+        bottom: 0
+        left: 35px
+        padding: 0 0 35px 0
+
+article
+    width: 75%
+    padding: 64px
+    color: $light_gray
+    margin-left: 35%
+    min-height: 100vh
+
+h2
+    font-size: 2.7em
+    margin: 0
+
+h1
+    text-transform: uppercase
+    font-size: 2em
+
+a, li, p, pre
+    line-height: 1.8
+
+input[type=text], textarea
+    border: none
+    color: #000
+    border-bottom: 1px solid #ddd
+    font-size: 22px
+    padding: 15px
+    width: 100%
+
+::-webkit-input-placeholder
+    font-size: 20px
+
+input
+    &[type=submit], &[type=email], &[type=password]
+        border: none
+        color: #000
+        border-bottom: 1px solid #ddd
+        font-size: 22px
+        padding: 15px
+        width: 100%
+
+button
+    &[type=submit]
+        border: none
+        color: #000
+        border-bottom: 1px solid #ddd
+        font-size: 22px
+        padding: 15px
+        width: 100%
+    &:hover
+        cursor: pointer
+
+input[type=file]
+    &::-ms-browse
+        border: none
+        color: #000
+        font-size: 22px
+        padding: 15px
+        width: 100%
+
+    &::-webkit-file-upload-button, &::file-selector-button
+        border: none
+        color: #000
+        font-size: 22px
+        padding: 15px
+        width: 100%
+
+textarea
+    resize: none
+    height: 45vh
+    font-family: Nunito, sans-serif
+
+input[type=submit]
+    margin-top: 15px
+    background: #f5f5f5
+    border: 0
+    color: #777
+
+input[type=submit]:hover
+    background: #eeeeee
+
+a
+    text-decoration: none
+    color: inherit
+    transition: ease-in-out 2s
+
+    &:hover
+        color: #111
+        transition: ease-in-out 0.4s
+
+img
+    margin: 15px 0 0 0
+    max-width: 100%
+
+blockquote
+    background-color: #ecf0f1
+    padding: 1em
+
+pre
+    background-color: $light_gray
+    color: white
+    padding: 1em
+    white-space: pre-wrap
+
+hr
+    margin: 2rem 0
+    height: 1px
+    background-color: #ecf0f1
+    border: none
+
+small
+    color: #777
+    font-size: 12px
+    margin: 15px 0 15px 0
+
+table
+    width: 100%
+    text-align: center
+    margin-top: 10px
+    border-collapse: collapse
+
+    img
+        max-width: 100%
+        max-height: 200px
+
+    tr
+        border-bottom: 1px solid $light_gray
+
+    th
+        padding: 10px 0
+        width: 25vw
+
+    td
+        width: 25vw
+        overflow-wrap: anywhere
+
+form
+    display: flex
+    flex-direction: column
+
+    label, button, span, a
+        margin: 10px 0 2px 0
+
+    a
+        text-align: center
+
+.danger
+    color: #B00100
+
+.pagination
+    background: none
+    position: inherit
+    display: block
+    width: 100%
+    max-height: 25px
+    padding: 10px 0 0 0
+    color: inherit
+    text-align: center
+
+    li
+        display: inline
+
+.invalid-feedback
+    color: indianred
+
+.success
+    color: forestgreen
+
+.inline
+    display: inline-flex
+    align-items: center
+
+.small
+    font-size: 12px
+
+.create-comment
+    border: 1px solid $light_gray
+    border-radius: 2px
+    padding: 2% 6%
+
+.thin
+    width: 50%
+
+.captcha-content
+    min-width: 240px
+    min-height: 91px
+
+.reload
+    padding: 24px 24px
+    margin: 12px 0 0 12px
+    border: 1px solid $light_gray
+    border-radius: 2px
+
+.wrap-anywhere
+    overflow-wrap: anywhere
+
+@font-face
+    font-family: Nunito
+    //src: asset_path('../fonts/Nunito.ttf')
+
+@media (max-width: 768px)
+    nav
+        position: absolute
+        display: flex
+        width: 100vw
+        height: 35%
+        justify-content: center
+        text-align: center
+
+        input
+            position: absolute
+            top: 10%
+            right: 10%
+            padding: 10px
+
+        *
+            margin: 0
+            padding: 0
+
+        div
+            display: none
+
+        h1
+            margin: 0 0 2vh 0
+
+    article
+        width: 100vw
+        margin: 35vh 0 0 0
+        padding: 5%
+        text-align: center
+
+    blockquote
+        margin: 0
+
+    .thin
+        margin: 0 auto
